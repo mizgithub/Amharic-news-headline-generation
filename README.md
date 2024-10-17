@@ -26,18 +26,20 @@ The contributions of this study provide insights for further improvements, such 
 git clone https://github.com/mizgithub/Amharic-news-headline-generation.git
 cd Amharic-news-headline-generation
 pip install -r requirements.txt
+```
 from tokenization import custom_tokenizer
+---
 ### Step 2: Creating tokenizer, Optional. You can also use already created tokenizer
-# Create tokenizer
-data = ["Example Amharic text here"]
+#### Create tokenizer
+```data = ["Example Amharic text here"]
 tokenizer = custom_tokenizer(data)
-print("Tokenizer saved to tokenizer.json")
+print("Tokenizer saved to tokenizer.json")```
 
 ### Step3: Train or use the model
-from amharic_nhg import ANHG
+```from amharic_nhg import ANHG```
 
-# Initialize the model
-model = ANHG()
+#Initialize the model
+```model = ANHG()
 
 # Train the model
 dataset = "path/to/dataset.csv"
@@ -47,7 +49,7 @@ model.train(dataset)
 text = "Sample Amharic news article"
 headline = model.predict(text)
 print("Generated Headline:", headline)
-
+```
 Links to dataset: https://drive.google.com/drive/folders/1hK8s8Tk99lCoikCNoBHCGdvTr3rGOG9q?usp=sharing
 Link to the finetuned model: https://drive.google.com/drive/folders/1BFBLTRZExBtqghG7pk5lha5emhQkNOgl?usp=sharing
 
